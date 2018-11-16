@@ -1,0 +1,66 @@
+const path=require("path")
+const ExtractTextPlugin=require("extract-text-webpack-plugin");
+//配置cssModule
+const CSSModuleConfig={
+    loader:"css-loader",
+    options:{
+        module:true,
+        localIdentName:"[local]-[hash:base64]"
+    }    
+}
+
+module.exports={
+	rules:[{
+		test:/\.scss$/,
+        use:ExtractTextPlugin.extract({
+            use:[CSSModuleConfig,{loader:"sass-loader"}],
+            fallback:"style-loader",
+        })
+	},{
+		//项目中的css使用CSSModule进行加载
+		test:/\.css$/,
+        use:ExtractTextPlugin.extract({
+            use:CSSModuleConfig,
+            fallback:"style-loader",
+        }),
+        exclude:/(node_modules)|(JZKER\.COMPONENTS)/
+    },{
+    	//自己的公共组件和antd的组件不需要开启CSSModule,额外使用普通方式加载
+		test:/\.css$/,
+        use:ExtractTextPlugin.extract({
+            use:{loader:"css-loader"},
+            fallback:"style-loader",
+        }),
+        include:/(node_modules)|(JZKER\.COMPONENTS)/
+    },{
+		test:/\.(js|jsx)$/,
+		use:[{loader:"babel-loader"}],
+		exclude:/(node_modules)|(JZKER\.COMPONENTS)/,
+	},{
+		test:/\.(otf|eot|svg|ttf|woff|woff2)$/,
+        use:[{
+            loader:"file-loader",
+            options:{
+            	name:"myFiles-[name]-[hash].[ext]",
+            	outputPath:"./fonts/",
+            	publicPath:"./"
+            }  
+        }]
+	},{
+		test:/\.(png|jpg|jpeg|gif)$/,
+        use:[{
+            loader:"file-loader",
+            options:{
+            	name:"myFiles-[name]-[hash].[ext]",
+            	outputPath:"images/",
+            	publicPath:"./",
+            }  
+        }]
+	},{
+		test:/\.json$/,
+		use:["json-loader"]
+	},{
+		test:/\.(html|htm)$/,
+		use:[{loader:"html-loader"}]
+	}],
+}

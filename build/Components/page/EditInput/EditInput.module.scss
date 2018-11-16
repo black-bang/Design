@@ -1,0 +1,50 @@
+// @import "~publicStyle";
+@import "../../../YuShiCheng/STYLE/public.scss";
+
+.EditInput{
+	max-width:240px;//可以响应式调节
+	overflow:hidden;
+	height: 45px;
+	@include flexRow("left");
+	&>.InputShell{
+		height: 45px;
+		text-align:left;
+		@include flex(1)
+		&>.InputElementShell{
+		
+		    min-width:200px;//可以响应式调节
+			overflow:hidden;
+			padding:0 5px;
+			top:15px;
+			position:relative;
+			&>.InputElement{
+				width:100%;
+				height:100%;
+				border:none;
+				outline:none;
+				z-index:99;
+				background:none;
+				position:absolute;
+				left:5px;top:0px;bottom:3px;
+				text-align:left;
+			}
+			&>.DisplayText{
+				opacity:0;
+				//white-space:nowrap;	
+			}
+		}	
+		&>.EmptyText{
+			color:#FF6E6E;
+			font-size:12px;
+		}			
+	}
+	&>.TextTool{
+		width:20px;
+		margin-left:10px;
+		@include flexRow("center");
+	}
+}
+
+
+
+

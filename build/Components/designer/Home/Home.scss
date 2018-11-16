@@ -1,0 +1,146 @@
+body{
+  transition: all .8s linear;
+}
+.homeContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: scroll;
+  background: #f3f3f3;
+  scroll-behavior: smooth;
+  em {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #000;
+    margin: 0 5px;
+    border-radius: 6px;
+  }
+  .pic {
+    width: 100%;
+    height: auto;
+    background-size: 100% 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  // 顶部
+  .homeTop {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-size: 100% 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      border: none;
+      opacity: 0;
+    }
+
+    .topBtn {
+      position: absolute;
+      width: 100%;
+      height: 45%;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      a {
+        width: 25%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  // 爱情故事
+  .LoveStory {
+    width: 100%;
+    height: auto;
+  }
+  // 制作团队
+  .makeTeam {
+    width: 100%;
+    height: auto;
+    .teamText {
+      width: 100%;
+      height: 30%;
+      p {
+        text-align: center;
+        color: #797979;
+      }
+      span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #797979;
+        margin: 15px 0;
+      }
+    }
+    .teamPic {
+      width: 100%;
+      height: 60%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      span {
+        width: 48%;
+        height: 48%;
+        margin-bottom: 5px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .footer {
+    width: 100%;
+    height: auto;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+    .storeName {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      .codePic {
+        width: 26%;
+        height: 80%;
+        margin: 3% 15px;
+        background: #aaa;
+      }
+      .Address {
+        margin-top: 3%;
+        font-size: 16px;
+        h3 {
+          margin: 10px 0;
+          display: flex;
+          align-items: center;
+        }
+        p {
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  // 模态窗
+
+}

@@ -1,0 +1,53 @@
+.LoveItem{
+  .pic {
+    width: 100%;
+    height: auto;
+    background-size: 100% 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+	  h3 {
+      text-align: center;
+      color: #161616;
+      margin-top: 10px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    p {
+      text-align: center;
+      color: #9d9d9d;
+      padding: 0 40px;
+      font-size: 14px;
+      line-height: 20px;
+
+      .LoveIcon {
+        margin: 0 8px;
+        img {
+          width: 24px;
+          height: 12px;
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      height: 45px;
+      margin: 15px 0;
+      display: flex;
+      justify-content: center;
+      span {
+        width: 210px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        border: 1px solid #ff7404;
+        color: #ff7404;
+        border-radius: 45px;
+      }
+    }
+  }

@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 921018 */
+  src: url('//at.alicdn.com/t/font_921018_m4cvempbw0n.eot');
+  src: url('//at.alicdn.com/t/font_921018_m4cvempbw0n.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_921018_m4cvempbw0n.woff') format('woff'),
+  url('//at.alicdn.com/t/font_921018_m4cvempbw0n.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_921018_m4cvempbw0n.svg#iconfont') format('svg');
+}
+.IconTip{
+    width: 220px;
+    height: 220px;
+
+    margin: auto;
+    margin-top:30px;
+    margin-bottom: 15px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span{
+        //  font-family: 'iconfont'; 
+        //  color: #03C235;
+        //  font-size: 48px;
+        width: 100%;
+        height: 100%;
+        display: block;
+         img{
+             width: 100%;
+             height: 100%;
+         }
+    }
+}
+.TextTip{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #03C235;
+        img{
+            width: 28px;
+            height: 28px;
+            margin-right: 8px;
+            margin-bottom: 3px;
+        }
+ 
+}
+.TextTipto{
+     width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 22px;
+    text-align: center;
+     color: #03C235;
+}
+.BtnTip{
+    width: 100%;
+    height: 45px;
+    background: #03C235;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    bottom: 0;
+    color: #fff;
+    span{
+        //   font-family: 'iconfont';
+        //   margin-right: 5px;
+        //   color: #fff;
+        //   font-size: 32px;
+        width: 20px;
+        height: 20px;
+        margin-right: 3px;
+            img{
+             width: 100%;
+             height: 100%;
+         }
+    }
+}
